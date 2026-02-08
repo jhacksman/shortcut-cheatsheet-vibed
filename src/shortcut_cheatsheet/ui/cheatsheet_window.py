@@ -228,6 +228,23 @@ class CheatsheetWindow(QMainWindow):
                 self.shortcuts_table.setItem(row, 1, keys_item)
                 row += 1
 
+    def _get_own_window_id(self) -> int:
+        """Get this window's ID from window-calls extension."""
+        if self._own_window_id is not None:
+            return self._own_window_id
+
+        windows = self.focus_provider.get_window_list()
+        for w in windows:
+            if w.wm_class.lower() == self.APP_WM_CLASS.lower():
+                self._own_window_id = w.window_id
+                return w.window_id
+
+            if "shortcut" in w.wm_class.lower() or "cheatsheet" in w.wm_class.lower():
+                self._own_window_id = w.window_id
+                return w.window_id
+
+        return 0
+
     def _move_to_corner(self, corner: ScreenCorner) -> None:
         """Move the window to the specified corner."""
         self.current_corner = corner
@@ -256,7 +273,11 @@ class CheatsheetWindow(QMainWindow):
         else:
             return
 
-        self.move(x, y)
+        window_id = self._get_own_window_id()
+        if window_id > 0:
+            self.position_provider.move_window(window_id, x, y)
+        else:
+            self.move(x, y)
 
     def keyPressEvent(self, event: QKeyEvent) -> None:
         """Handle key press events."""

@@ -112,26 +112,43 @@ class GnomeWindowCallsProvider(WindowFocusProvider):
 
         for w in windows_data:
             if w.get("frame_type") == 0 and w.get("window_type") == 0:
-                details_raw = self._call_dbus_method("Details", str(w.get("id", 0)))
+                window_id = w.get("id", 0)
+                details_raw = self._call_dbus_method("Details", str(window_id))
                 if details_raw:
                     try:
                         details = json.loads(details_raw)
                         if details.get("focus", False):
-                            title_raw = self._call_dbus_method("GetTitle", str(w.get("id", 0)))
-                            title = title_raw.strip("'\"") if title_raw else ""
+                            title_raw = self._call_dbus_method("GetTitle", str(window_id))
+                            title = ""
+                            if title_raw:
+                                title = title_raw.strip()
+                                if title.startswith("'") and title.endswith("'"):
+                                    title = title[1:-1]
+                                elif title.startswith('"') and title.endswith('"'):
+                                    title = title[1:-1]
 
                             return WindowInfo(
-                                wm_class=details.get("wm_class", ""),
+                                wm_class=details.get("wm_class", w.get("wm_class", "")),
                                 title=title,
-                                pid=details.get("pid", 0),
-                                window_id=w.get("id", 0),
-                                x=details.get("x", 0),
-                                y=details.get("y", 0),
-                                width=details.get("width", 0),
-                                height=details.get("height", 0)
+                                pid=details.get("pid", w.get("pid", 0)),
+                                window_id=window_id,
+                                x=details.get("x", w.get("x", 0)),
+                                y=details.get("y", w.get("y", 0)),
+                                width=details.get("width", w.get("width", 0)),
+                                height=details.get("height", w.get("height", 0))
                             )
                     except json.JSONDecodeError:
-                        continue
+                        if w.get("wm_class"):
+                            return WindowInfo(
+                                wm_class=w.get("wm_class", ""),
+                                title="",
+                                pid=w.get("pid", 0),
+                                window_id=window_id,
+                                x=w.get("x", 0),
+                                y=w.get("y", 0),
+                                width=w.get("width", 0),
+                                height=w.get("height", 0)
+                            )
         return None
 
     def get_window_by_id(self, window_id: int) -> Optional[WindowInfo]:
