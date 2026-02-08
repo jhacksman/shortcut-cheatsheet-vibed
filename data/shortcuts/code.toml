@@ -1,0 +1,81 @@
+app_name = "Visual Studio Code"
+wm_class = "code"
+
+[sections]
+
+[sections.General]
+"Command Palette" = "Ctrl + Shift + P"
+"Quick Open" = "Ctrl + P"
+"New Window" = "Ctrl + Shift + N"
+"Close Window" = "Ctrl + Shift + W"
+"User Settings" = "Ctrl + ,"
+"Keyboard Shortcuts" = "Ctrl + K, Ctrl + S"
+
+[sections.Editing]
+"Cut Line" = "Ctrl + X"
+"Copy Line" = "Ctrl + C"
+"Move Line Down" = "Alt + Down"
+"Move Line Up" = "Alt + Up"
+"Copy Line Down" = "Shift + Alt + Down"
+"Copy Line Up" = "Shift + Alt + Up"
+"Delete Line" = "Ctrl + Shift + K"
+"Insert Line Below" = "Ctrl + Enter"
+"Insert Line Above" = "Ctrl + Shift + Enter"
+"Indent Line" = "Ctrl + ]"
+"Outdent Line" = "Ctrl + ["
+"Go to Beginning of Line" = "Home"
+"Go to End of Line" = "End"
+"Go to Beginning of File" = "Ctrl + Home"
+"Go to End of File" = "Ctrl + End"
+"Scroll Line Up" = "Ctrl + Up"
+"Scroll Line Down" = "Ctrl + Down"
+"Add Cursor Above" = "Ctrl + Alt + Up"
+"Add Cursor Below" = "Ctrl + Alt + Down"
+"Undo" = "Ctrl + Z"
+"Redo" = "Ctrl + Shift + Z"
+
+[sections.Search]
+"Find" = "Ctrl + F"
+"Replace" = "Ctrl + H"
+"Find Next" = "F3"
+"Find Previous" = "Shift + F3"
+"Select All Occurrences" = "Ctrl + Shift + L"
+"Add Selection to Next Match" = "Ctrl + D"
+"Search in Files" = "Ctrl + Shift + F"
+"Replace in Files" = "Ctrl + Shift + H"
+
+[sections.Navigation]
+"Go to Line" = "Ctrl + G"
+"Go to File" = "Ctrl + P"
+"Go to Symbol" = "Ctrl + Shift + O"
+"Go to Definition" = "F12"
+"Peek Definition" = "Alt + F12"
+"Go to References" = "Shift + F12"
+"Go Back" = "Alt + Left"
+"Go Forward" = "Alt + Right"
+
+[sections.View]
+"Toggle Sidebar" = "Ctrl + B"
+"Explorer" = "Ctrl + Shift + E"
+"Search" = "Ctrl + Shift + F"
+"Source Control" = "Ctrl + Shift + G"
+"Debug" = "Ctrl + Shift + D"
+"Extensions" = "Ctrl + Shift + X"
+"Terminal" = "Ctrl + `"
+"Problems" = "Ctrl + Shift + M"
+"Output" = "Ctrl + Shift + U"
+"Zen Mode" = "Ctrl + K, Z"
+
+[sections.Editor]
+"Split Editor" = "Ctrl + \\"
+"Focus into Editor Group" = "Ctrl + 1/2/3"
+"Close Editor" = "Ctrl + W"
+"Close All Editors" = "Ctrl + K, Ctrl + W"
+
+[sections.Debug]
+"Start/Continue" = "F5"
+"Stop" = "Shift + F5"
+"Step Over" = "F10"
+"Step Into" = "F11"
+"Step Out" = "Shift + F11"
+"Toggle Breakpoint" = "F9"

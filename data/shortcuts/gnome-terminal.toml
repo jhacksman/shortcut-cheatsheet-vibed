@@ -1,0 +1,38 @@
+app_name = "GNOME Terminal"
+wm_class = "gnome-terminal"
+
+[sections]
+
+[sections.Tabs]
+"New Tab" = "Ctrl + Shift + T"
+"Close Tab" = "Ctrl + Shift + W"
+"Next Tab" = "Ctrl + Page Down"
+"Previous Tab" = "Ctrl + Page Up"
+"Switch to Tab 1-10" = "Alt + 1-0"
+"Move Tab Left" = "Ctrl + Shift + Page Up"
+"Move Tab Right" = "Ctrl + Shift + Page Down"
+
+[sections.Editing]
+"Copy" = "Ctrl + Shift + C"
+"Paste" = "Ctrl + Shift + V"
+"Select All" = "Ctrl + Shift + A"
+
+[sections.View]
+"Zoom In" = "Ctrl + +"
+"Zoom Out" = "Ctrl + -"
+"Normal Size" = "Ctrl + 0"
+"Full Screen" = "F11"
+
+[sections.Search]
+"Find" = "Ctrl + Shift + F"
+"Find Next" = "Ctrl + Shift + G"
+"Find Previous" = "Ctrl + Shift + H"
+"Clear Highlight" = "Ctrl + Shift + J"
+
+[sections.Window]
+"New Window" = "Ctrl + Shift + N"
+"Close Window" = "Ctrl + Shift + Q"
+
+[sections.Terminal]
+"Reset" = "Ctrl + Shift + R"
+"Reset and Clear" = "Ctrl + Shift + G"

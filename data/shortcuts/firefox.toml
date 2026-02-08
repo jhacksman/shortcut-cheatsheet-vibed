@@ -1,0 +1,63 @@
+app_name = "Firefox"
+wm_class = "firefox"
+
+[sections]
+
+[sections.Navigation]
+"Go Back" = "Alt + Left"
+"Go Forward" = "Alt + Right"
+"Home" = "Alt + Home"
+"Open File" = "Ctrl + O"
+"Reload" = "Ctrl + R"
+"Reload (override cache)" = "Ctrl + Shift + R"
+"Stop" = "Escape"
+
+[sections.Tabs]
+"New Tab" = "Ctrl + T"
+"Close Tab" = "Ctrl + W"
+"Undo Close Tab" = "Ctrl + Shift + T"
+"Next Tab" = "Ctrl + Tab"
+"Previous Tab" = "Ctrl + Shift + Tab"
+"Go to Tab 1-8" = "Ctrl + 1-8"
+"Go to Last Tab" = "Ctrl + 9"
+"Move Tab Left" = "Ctrl + Shift + Page Up"
+"Move Tab Right" = "Ctrl + Shift + Page Down"
+
+[sections.Windows]
+"New Window" = "Ctrl + N"
+"New Private Window" = "Ctrl + Shift + P"
+"Close Window" = "Ctrl + Shift + W"
+
+[sections.Editing]
+"Copy" = "Ctrl + C"
+"Cut" = "Ctrl + X"
+"Paste" = "Ctrl + V"
+"Undo" = "Ctrl + Z"
+"Redo" = "Ctrl + Shift + Z"
+"Select All" = "Ctrl + A"
+
+[sections.Search]
+"Find in Page" = "Ctrl + F"
+"Find Again" = "Ctrl + G"
+"Find Previous" = "Ctrl + Shift + G"
+"Quick Find" = "/"
+"Search Bar" = "Ctrl + K"
+"Address Bar" = "Ctrl + L"
+
+[sections.Bookmarks]
+"Bookmark This Page" = "Ctrl + D"
+"Show Bookmarks" = "Ctrl + Shift + O"
+
+[sections.Tools]
+"Downloads" = "Ctrl + J"
+"History" = "Ctrl + H"
+"Developer Tools" = "F12"
+"Web Console" = "Ctrl + Shift + K"
+"Inspector" = "Ctrl + Shift + C"
+"Page Source" = "Ctrl + U"
+
+[sections.Zoom]
+"Zoom In" = "Ctrl + +"
+"Zoom Out" = "Ctrl + -"
+"Reset Zoom" = "Ctrl + 0"
+"Full Screen" = "F11"
